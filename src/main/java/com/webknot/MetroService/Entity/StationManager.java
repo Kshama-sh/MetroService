@@ -9,15 +9,19 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class StationManager {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
-    private String email;
-
     @ManyToOne
     @JoinColumn(name = "station_id", nullable = false)
-    private MetroStation metroStation;
+    private MetroStation station;
+
+    @Column(nullable = false)
+    private String name;
+
+    @Column(nullable = false, unique = true)
+    private String contactNumber;
 }

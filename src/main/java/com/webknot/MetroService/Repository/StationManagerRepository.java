@@ -1,13 +1,12 @@
 package com.webknot.MetroService.Repository;
 
-import com.webknot.MetroService.Entity.ActiveUser;
+import com.webknot.MetroService.Entity.MetroStation;
+import com.webknot.MetroService.Entity.StationManager;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public interface ActiveUserRepository extends JpaRepository<ActiveUser, Long> {
-
+public interface StationManagerRepository extends JpaRepository<StationManager, Long> {
 }

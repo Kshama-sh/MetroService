@@ -16,5 +16,9 @@ public class MetroStation {
     private Long id;
 
     private String stationName;
-    private String route;
+    private String location;
+    private boolean isActive;
+
+//    @OneToMany(mappedBy = "station")
+//    private List<StationManager> managers;
 }
